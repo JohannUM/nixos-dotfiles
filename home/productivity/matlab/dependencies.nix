@@ -1,0 +1,84 @@
+pkgs: 
+(with pkgs; [
+  alsa-lib
+  cairo
+  cups
+  fontconfig
+  gdk-pixbuf
+  glib
+  glibc
+  gst_all_1.gstreamer
+  gst_all_1.gst-plugins-base
+  gtk3
+  libdrm
+  libglvnd
+  libsndfile
+  libuuid
+  libxcrypt
+  libxcrypt-legacy
+  mesa
+  libgbm
+  nspr
+  nss
+  numactl
+  pam
+  pango
+  procps
+  libxkbcommon
+  xkeyboard_config
+  udev
+  jre
+  ncurses
+  gcc
+  gfortran
+  at-spi2-atk
+  at-spi2-core
+  linux-pam
+  zlib
+  unzip
+  glibcLocales
+  libselinux
+  python3
+  dbus
+  atk
+  cacert
+  gtk2
+
+  # only matlab
+  fribidi
+  libatomic_ops
+  libcap
+  libtirpc
+  libtool
+  nettools
+  pixman
+]) ++ (with pkgs.xorg; [
+  libSM
+  libX11
+  libxcb
+  libXext
+  libXi
+  libXrender
+  libICE
+  libXcomposite
+  libXcursor
+  libXdamage
+  libXfixes
+  libXft
+  libXinerama
+  libXrandr
+  libXt 
+  libXtst
+  libXxf86vm
+])
+
+/*
+  not-available = [
+    cairo-gobject
+    glibc-langpack-en
+    libibverbs
+    librdmacm
+    libwayland-client
+    make # maybe gnumake
+  ];
+*/
